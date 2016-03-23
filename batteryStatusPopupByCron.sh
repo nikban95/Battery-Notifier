@@ -12,7 +12,7 @@ export DISPLAY=:0
 notifyUser=`users | awk '{print $1;}'`
 
 # low battery
-lowBattery="100"
+lowBattery="20"
 
 # path to battery /sys
 batteryPath0="/sys/class/power_supply/BAT0/"
@@ -35,11 +35,11 @@ if [ -e $batteryPath ]
 
 	if [ $batteryLevel -le $lowBattery ] && [ "$batteryStatus" = "Discharging" ]
 		then
-		sudo -u $notifyUser espeak -a 4 "Battery Low $batteryLevel percent"
+		sudo -u $notifyUser espeak "Battery Low $batteryLevel percent"
 		sudo -u $notifyUser zenity --warning --title "BATTERY LOW" --text "Battery Low $batteryLevel%."
 	elif [ "$batteryStatus" = "Full" ]
 		then
-		sudo -u $notifyUser espeak -a 4 "Battery Full"
+		sudo -u $notifyUser espeak "Battery Full"
 		sudo -u $notifyUser zenity --warning --title "BATTERY FULL" --text "Battery Full $batteryLevel%."
 	fi
 fi
