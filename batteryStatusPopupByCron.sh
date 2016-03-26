@@ -28,6 +28,8 @@ else
 	batteryPath="NULL"
 fi
 
+# -e in if to check if file exists or not
+# -e is used instead of -f as to check for any type of file rather than only regular file
 if [ -e $batteryPath ]
 	then
 	batteryLevel=`cat $batteryPath/capacity`
