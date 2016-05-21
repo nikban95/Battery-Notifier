@@ -17,4 +17,4 @@ Usage(Using Crontab):
     
     */2 * * * * sh ($PATH_TO_FILE)
     
-    eg: */2 * * * * sh /home/nike/BatteryNotificationScript/batteryStatusPopupByCron.sh
+    eg: */2 * * * * sh /home/nike/projects/BatteryNotificationScript/batteryStatusPopupByCron.sh
