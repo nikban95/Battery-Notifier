@@ -1,5 +1,6 @@
-# Battery-Notification-Script
-This is a script which gives popup on low battery. It speaks the low battery message.
+# Battery-Notifier
+This is a script which gives popup on low battery in Linux Mint.
+It also speaks the low battery message in English.
 
 Dependency:
 
