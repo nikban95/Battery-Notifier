@@ -1,21 +1,30 @@
-# Battery-Notifier
-This is a script which gives popup on low battery in Linux Mint.
-It also speaks the low battery message in English.
+### Battery Notifier
 
-Dependency:
+#### What is it about?
+- In Linux Mint, the notification for low battery is very subtle. Which generally leads to system shutdown as it gets ignored.
+- This is a script which gives popup on low battery(every 5 min) until charger is connected.
+- It also speaks the low battery message in English(For scenarios where we are not looking at the system).
 
-1. espeak
+#### Dependency:
+- espeak
+- zenity
 
-2. zenity
+#### Setup(Using CronJob):
+- Clone the repo at any suitable location.
+- Or download the batteryStatusPopupByCron.sh file and save it in any folder.
+- Open the crontab file by command: 
+````
+sudo crontab -e
+````
+- Append below written code to it. 
+````
+*/5 * * * * sh ($PATH_TO_FILE)
+````
+eg:
+````
+*/5 * * * * sh /home/nike/projects/BatteryNotificationScript/batteryStatusPopupByCron.sh
+````
+- You can change the interval by changing the number in the above command. Currently is is 5 minutes. You ca change it let's say 10 minutes as well.
+- Now the setup is done and you will start receiving notifications on low battery.
 
-Usage(Using Crontab):
-
-1. Download the batteryStatusPopupByCron.sh file and save it in any folder.
-
-2. Open the crontab file by command: sudo crontab -e
-
-3. Append below written line to it. 
-    
-    */2 * * * * sh ($PATH_TO_FILE)
-    
-    eg: */2 * * * * sh /home/nike/projects/BatteryNotificationScript/batteryStatusPopupByCron.sh
+Feel free to suggest any changes or contributing to it!!!
