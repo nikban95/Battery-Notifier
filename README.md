@@ -2,8 +2,9 @@
 
 #### What is it about?
 - In Linux Mint, the notification for low battery is very subtle. Which generally leads to system shutdown as it gets ignored.
-- This is a script which gives popup on low battery(every 5 min) until charger is connected.
+- This is a script which gives popup on *Low battery*(every 5 min) until charger is connected.
 - It also speaks the low battery message in English(For scenarios where we are not looking at the system).
+- It also notifies when the system gets *Fully charged* as well.
 
 #### Dependency:
 - espeak
