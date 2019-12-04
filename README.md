@@ -27,4 +27,5 @@ eg:
 - You can change the interval by changing the number in the above command. Currently is is 5 minutes. You ca change it let's say 10 minutes as well.
 - Now the setup is done and you will start receiving notifications on low battery.
 
+
 Feel free to suggest any changes or contributing to it!!!
